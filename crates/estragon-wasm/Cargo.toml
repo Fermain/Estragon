@@ -1,0 +1,15 @@
+[package]
+name = "estragon-wasm"
+description = "WASM bindings for the Estragon layout core (used by the web studio)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+estragon-layout = { workspace = true }
+serde_json = { workspace = true }
+wasm-bindgen = "=0.2.130"

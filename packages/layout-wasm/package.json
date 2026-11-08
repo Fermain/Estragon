@@ -1,0 +1,10 @@
+{
+  "name": "@estragon/layout-wasm",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Estragon's Taffy layout core compiled to WASM",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": ["index.js", "index.d.ts", "pkg"]
+}

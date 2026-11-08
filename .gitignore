@@ -1,0 +1,9 @@
+/target
+node_modules/
+.godot/
+godot/addons/estragon/bin
+.svelte-kit/
+build/
+dist/
+pkg/
+.DS_Store

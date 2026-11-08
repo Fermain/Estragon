@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo test --workspace
+      - run: cargo build -p estragon-wasm --target wasm32-unknown-unknown --release
+
+  # TODO: parity job (download Godot headless, `pnpm parity`) and a
+  # cross-platform GDExtension build matrix (linux/windows/macos/android).

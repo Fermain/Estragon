@@ -1,0 +1,15 @@
+[workspace]
+resolver = "3"
+members = ["crates/estragon-layout", "crates/estragon-godot", "crates/estragon-wasm"]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/Fermain/Estragon"
+
+[workspace.dependencies]
+estragon-layout = { path = "crates/estragon-layout" }
+taffy = { version = "0.15", features = ["serde", "parse"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

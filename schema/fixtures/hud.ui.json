@@ -1,0 +1,61 @@
+{
+  "width": 1280,
+  "height": 720,
+  "root": {
+    "id": "hud",
+    "kind": "grid",
+    "fill": "#10141c",
+    "style": {
+      "columns": "220px 1fr 220px",
+      "rows": "160px 1fr auto",
+      "areas": ["map . status", ". . inventory", "chat hotbar hotbar"],
+      "gap": 16,
+      "padding": 24
+    },
+    "children": [
+      { "id": "minimap", "fill": "#2d6a4f", "style": { "area": "map" } },
+      {
+        "id": "status",
+        "kind": "grid",
+        "fill": "#1f2937",
+        "style": { "area": "status", "rows": "repeat(3, 1fr)", "gap": 8, "padding": 12 },
+        "children": [
+          { "id": "hp", "fill": "#c1121f" },
+          { "id": "mp", "fill": "#1d4ed8" },
+          { "id": "xp", "fill": "#ca8a04", "style": { "justifySelf": "start", "minWidth": 120 } }
+        ]
+      },
+      {
+        "id": "inventory",
+        "kind": "grid",
+        "fill": "#1f2937",
+        "style": { "area": "inventory", "columns": "repeat(4, 1fr)", "autoRows": "44px", "gap": 6, "padding": 10, "alignSelf": "start" },
+        "children": [
+          { "id": "slot-1", "fill": "#374151", "style": { "column": "span 2", "row": "span 2" } },
+          { "id": "slot-2", "fill": "#374151" },
+          { "id": "slot-3", "fill": "#374151" },
+          { "id": "slot-4", "fill": "#374151" },
+          { "id": "slot-5", "fill": "#374151" },
+          { "id": "slot-6", "fill": "#374151", "style": { "column": "1 / -1" } }
+        ]
+      },
+      { "id": "chat", "fill": "#3f3f46", "style": { "area": "chat", "minHeight": 140 } },
+      {
+        "id": "hotbar",
+        "kind": "grid",
+        "fill": "#1f2937",
+        "style": { "area": "hotbar", "columns": "repeat(8, 1fr)", "gap": 8, "padding": 10, "alignSelf": "end" },
+        "children": [
+          { "id": "key-1", "fill": "#6d28d9", "style": { "minHeight": 56 } },
+          { "id": "key-2", "fill": "#6d28d9" },
+          { "id": "key-3", "fill": "#6d28d9" },
+          { "id": "key-4", "fill": "#6d28d9" },
+          { "id": "key-5", "fill": "#6d28d9" },
+          { "id": "key-6", "fill": "#6d28d9" },
+          { "id": "key-7", "fill": "#6d28d9" },
+          { "id": "key-8", "fill": "#6d28d9" }
+        ]
+      }
+    ]
+  }
+}

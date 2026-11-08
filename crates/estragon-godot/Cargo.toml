@@ -1,0 +1,15 @@
+[package]
+name = "estragon-godot"
+description = "Estragon GDExtension: Taffy-powered grid containers for Godot"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+estragon-layout = { workspace = true }
+serde_json = { workspace = true }
+godot = { version = "0.5.5", features = ["api-4-7"] }

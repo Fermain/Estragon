@@ -1,0 +1,12 @@
+[package]
+name = "estragon-layout"
+description = "Shared Taffy-based grid layout core for Estragon (used by the Godot extension and the web studio)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+taffy = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

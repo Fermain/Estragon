@@ -1,0 +1,12 @@
+; Estragon sandbox: a Godot project for trying the extension and running parity checks.
+config_version=5
+
+[application]
+config/name="Estragon Sandbox"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.7")
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"

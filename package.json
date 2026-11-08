@@ -1,0 +1,13 @@
+{
+  "name": "estragon",
+  "private": true,
+  "description": "Stop waiting for Godot UI. Design it on the web.",
+  "license": "MIT",
+  "scripts": {
+    "build:wasm": "cargo build -p estragon-wasm --target wasm32-unknown-unknown --release && wasm-bindgen target/wasm32-unknown-unknown/release/estragon_wasm.wasm --out-dir packages/layout-wasm/pkg --target web",
+    "build:godot": "cargo build -p estragon-godot",
+    "dev": "pnpm build:wasm && pnpm --filter studio dev",
+    "parity": "pnpm build:godot && node scripts/parity.mjs",
+    "test": "cargo test --workspace"
+  }
+}
